@@ -5,7 +5,8 @@ import { Pacifico } from "next/font/google"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { BsStars } from "react-icons/bs"
-import { FaRepeat } from "react-icons/fa6"
+import Link from "next/link"
+// import { FaRepeat } from "react-icons/fa6"
 
 const pacifico = Pacifico({
   subsets: ["latin"],
@@ -221,7 +222,7 @@ export default function HeroGeometric({
           </motion.div>
 
           <motion.div variants={buttonVariants} className="mt-8">
-  <a href="/" className="inline-block">
+          <Link href="/" className="inline-block">
     <motion.button
       className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-blue-400 rounded-full text-white font-medium shadow-lg hover:shadow-indigo-500/25 hover:shadow-xl transition-all duration-300"
       whileHover={{ scale: 1.05 }}
@@ -229,11 +230,10 @@ export default function HeroGeometric({
     >
       <span className="flex items-center gap-2">
         Coming Soon
-        {/* Build Now */}
         <BsStars className="w-5 h-5" />
       </span>
     </motion.button>
-  </a>
+  </Link>
 
   {/* Graded Line and Powered by Text */}
   <br /><br />
